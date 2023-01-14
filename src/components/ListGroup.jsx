@@ -1,7 +1,7 @@
 import React from 'react'
 import ListItem from './ListItem'
 
-function ListGroup({manager,deleteTransaction}) {
+function ListGroup({manager,deleteTransaction,EditTransaction}) {
 
     return (
 
@@ -14,7 +14,7 @@ function ListGroup({manager,deleteTransaction}) {
                 </button>
             </li> */}
             {
-                manager.map((transaction)=><ListItem transaction={transaction} deleteTransaction={deleteTransaction} />)
+                manager.map((transaction)=><ListItem transaction={transaction} deleteTransaction={deleteTransaction} EditTransaction={EditTransaction} />)
             }
         </ul>
     )

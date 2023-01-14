@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { toast } from 'react-toastify'
 
-function InputForm({ ManageTransaction }) {
-
+function InputForm({ ManageTransaction, Edit,UpdateTransaction }) {
+    // console.log(Edit)
     const [text, setText] = useState("")
     const [amount, setAmount] = useState("")
     const handleSubmit = (e) => {
@@ -15,18 +15,27 @@ function InputForm({ ManageTransaction }) {
         if (text === "") {
             toast.error("Please Fill  All Input Fields")
         }
-       else if (amount === "") {
+        else if (amount === "") {
             toast.error("Please Fill  All Input Fields")
         }
         else {
-            ManageTransaction(transaction)
-            setText("")
-            setAmount("")
+            if (Edit.isEdit) {
+                UpdateTransaction(Edit.id, text, parseInt(amount))
+            }
+            else {
+                ManageTransaction(transaction)
+                setText("")
+                setAmount("")
+            }
         }
     }
 
 
-
+    // Edit
+    useEffect(() => {
+        setText(Edit.text)
+        setAmount(Edit.amount)
+    }, [Edit])
 
 
     return (

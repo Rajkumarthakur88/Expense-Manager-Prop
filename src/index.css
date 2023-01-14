@@ -24,7 +24,7 @@
      font-weight: 600;
      text-decoration: underline;
      text-align: center;
-     background-color: #3a3a3add;
+     background-color: #16213E;
      color: #fff;
      padding: 15px;
 }
@@ -47,7 +47,8 @@
      flex-direction: column;
      border-radius: 16px;
      border-radius: 11px;
-     background: #4285F4;
+     /* background: #4285F4; */
+     background-color: #f39c12;
      box-shadow: 0.5px 1px 10px #5f5959,
           -0.5px -1px 10px #494646;
      margin-right: 5px;
@@ -58,12 +59,14 @@
      font-size: 50px;
      font-weight: 600;
      color: #Fff;
+     border: 1px dotted wheat;
+     padding: 5px 9px ;
 }
 
 .balance-section h2 {
      font-size: 40px;
      font-weight: 600;
-     color: #FFE300;
+     color: #fff;
 }
 
 .input-section {
@@ -112,7 +115,7 @@ form input:focus {
      border: none;
      border-radius: 5px;
      color: white;
-     background-color: #f39302;
+     background-color: #377D71;
      font-size: 20px;
      font-weight: 500;
 }
@@ -169,8 +172,9 @@ form input:focus {
      padding: 50px;
      border: none;
      border-radius: 5px;
-     color: #DA0037;
+     /* color: #DA0037; */
      background-color: #E50914;
+     /* background-color: #f56954; */
      box-shadow: 0.5px 1px 10px #5f5959,
           -0.5px -1px 10px #494646;
      display: flex;
@@ -219,10 +223,10 @@ form input:focus {
      border-radius: 10px;
 }
 
-.transaction h3 {
-     font-size: 30px;
-     font-weight: 500;
-     color: aliceblue;
+.list-item h3 {
+     font-size: 27px;
+     font-weight: 600;
+
 }
 
 .expense h2 {
@@ -246,7 +250,15 @@ form input:focus {
      border-radius: 5px;
 
 }
-
+.edit-btn{
+     width: 40px;
+     height: 30px;
+     border: none;
+     color: white;
+     background-color: rgb(1, 81, 0);
+     border-radius: 4px;
+     margin-right: 15px;
+}
 button {
      cursor: pointer;
 }
